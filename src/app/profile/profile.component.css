@@ -1,0 +1,58 @@
+mat-toolbar{
+    background-color: maroon;
+    color:white;
+    font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    font-size: x-large;
+    font-style: italic;
+}
+mat-toolbar span{
+    
+    padding:30px;
+}
+.example-spacer {
+    flex: 1 1 auto;
+  }
+  .navlinks a{
+      margin-right:20px;
+      color:white;
+      text-decoration: none;
+
+  }
+.main{
+    background-color: #FFFFFF;
+    margin:2%;
+    min-height: 100%;
+    padding: 0;
+    width: 95%;
+    overflow:auto;
+    border-left:1px solid maroon;
+    border-right:1px solid maroon;
+    border-top:1px solid maroon;
+    border-radius: 15px;
+}
+table{
+    margin:2%;
+    width:96%;
+    border-bottom: 1px solid black;
+    padding:2%;
+}
+tr,td{
+    font-size: x-large;
+    font-weight: bolder;
+    text-align: center;
+    padding:1%;
+}
+table tr td #userprofile{
+    width:40%;
+    font-size: xx-large;
+    font-weight: bolder;
+    text-align: center;
+    height:30%;
+    border-right:1px solid black;
+}
+mat-grid-tile {
+    background: lightblue;
+  }
+  mat-grid-list{
+      margin:2%;
+  }

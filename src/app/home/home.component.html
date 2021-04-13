@@ -1,0 +1,35 @@
+<mat-toolbar>
+    <span>Online Picture Management</span>
+    <span class="example-spacer"></span>
+    <div class="navlinks">
+        <a routerLink="/profile" [style.display]="isVisible ? 'inline' : 'none'">Profile</a>
+        <a routerLink="/addImage" [style.display]="isVisible ? 'inline' : 'none'">Add Image</a>
+        <a  routerLink="/admin" [style.display]="isVisible ? 'none' : 'inline'">dashboard</a>
+        <a routerLink="">Logout</a>
+        </div>
+</mat-toolbar>
+<div class="homeHead"> 
+   <span><mat-icon>home</mat-icon> Home</span> 
+</div>
+<div class="imagesList">
+<div *ngFor="let item of data">
+<mat-card class="example-card">
+    <mat-card-header>
+      <div mat-card-avatar><mat-icon>account_circle</mat-icon></div>
+      <mat-card-title>{{item.imageName}}</mat-card-title>
+    </mat-card-header>
+    <img mat-card-image [src]="item.image" alt="Photo of a Shiba Inu">
+    <mat-card-actions>
+      <button><mat-icon>favorite_border</mat-icon></button>
+      <button (click)="commentButtonClick(item.imageName,item.imageId)"><mat-icon >chat_bubble_outline</mat-icon></button>
+      <button><mat-icon>screen_share</mat-icon></button>
+    </mat-card-actions>
+    <mat-card-content>
+        <p>
+          {{item.imageTag}}
+        </p>
+      </mat-card-content>
+  </mat-card>
+  <br>
+</div>
+</div>

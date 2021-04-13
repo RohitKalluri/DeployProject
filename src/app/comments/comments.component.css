@@ -1,0 +1,87 @@
+mat-toolbar{
+    background-color: maroon;
+    color:white;
+    font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    font-size: x-large;
+    font-style: italic;
+
+}
+mat-toolbar span{
+    padding:30px;
+}
+.example-spacer {
+    flex: 1 1 auto;
+  }
+  .navlinks a{
+      margin-right:20px;
+      color:white;
+      text-decoration: none;
+  }
+#loop{
+    width:100%;
+}
+table,th,td
+{
+    table-layout:fixed;
+    font-size:larger;
+    border: 3px solid; 
+    text-align: left;
+    margin-left: 5%;
+    border:0ch;
+    width:80%;
+}
+#id1
+{
+    border: 2px solid;
+    width: 50px; 
+    background-color:aliceblue;
+    text-align:center; 
+    vertical-align: middle;
+    font-size: x-large;
+}
+#id2
+{
+    border: 2px solid; 
+    width: 250px; 
+    background-color: grey;
+    
+}
+#id2 h2{
+    text-align:center;
+    vertical-align: middle;
+    padding:2%
+}
+#id3
+{
+    border: 2px solid; 
+    width:80%;
+    height:5%;
+    font-size: medium;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    font-style: italic;
+    font-weight: normal;
+    padding-left:2px;
+    overflow:auto;
+    line-height:1.7em;
+    padding-left:2px;
+}
+#id5
+{
+    width: 50px; 
+    border:none;
+    background-color: aliceblue;
+    text-align: center;
+    vertical-align:middle;
+    font-size: x-large;
+}
+#btn{
+    border: 2px solid;
+    width: 100px; 
+    background-color:aliceblue;
+    text-align:center; 
+    font-size: x-large;
+    vertical-align:middle;
+}
+button :focus{
+    outline:none;
+}

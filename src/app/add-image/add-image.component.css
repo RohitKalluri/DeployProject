@@ -1,0 +1,30 @@
+mat-toolbar {
+  background-color: maroon;
+  color: white;
+  font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande",
+    "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
+  font-size: x-large;
+  font-style: italic;
+}
+mat-toolbar span {
+  padding: 30px;
+}
+.example-spacer {
+  flex: 1 1 auto;
+}
+.navlinks a {
+  margin-right: 20px;
+  color: white;
+  text-decoration: none;
+}
+.card {
+  padding: 2%;
+}
+.card-row {
+  display: flex;
+  justify-content: space-between;
+  height: 50%;
+}
+button {
+  margin: auto;
+}

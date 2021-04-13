@@ -1,0 +1,28 @@
+<header>
+  <p>Online Picture Management</p>
+</header>
+<div class="wrapper fadeInDown">
+  <div id="formContent">
+    <div class="fadeIn first">
+      <b><p class="heading">SIGN UP   <i class="fa fa-user"></i></p></b>
+    </div>
+    <form signupForm="ngForm"> 
+    <br>
+    Email ID : <input type="email" name="eid" pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,4}" #eid="ngModel" [(ngModel)]="email" required>
+      <div class="alert-danger" *ngIf="eid.errors?.pattern">Invalid Email!!</div>
+      <span class="help-block" *ngIf="eid.invalid && eid.touched && !eid.errors?.pattern">Email is required</span><br>
+    Password : <input type="password" name="password" #password="ngModel" [(ngModel)]="pass" pattern="[a-zA-Z0-9@#/*]{8,}" matTooltip='1.Password must be atleast 8 charcters &#13; 2.It must be Alphanumeric(a-z,A-Z,0-9) &#13; 3.It must contain atleast one symbol(@#/*)' matTooltipClass="multiline-tooltip" matTooltipPosition="right" required>
+    <div class="alert-danger" *ngIf="password.errors?.pattern">Invalid Password!!</div>
+    <span class="help-block" *ngIf="password.invalid && password.touched && !password.errors?.pattern">Password is required</span><br>
+    User Name : <input type="text"  name="username" #username="ngModel" [(ngModel)]="userName"  required>
+    <span class="help-block" *ngIf="username.invalid && username.touched">Username is required</span><br>
+    Mobile Number : <input type="tel" name="mno" #mno="ngModel" [(ngModel)]="mobileNumber" pattern="\d{10}" required>
+    <div class="alert-danger" *ngIf="mno.errors?.pattern">Invalid Mobilenumber!!</div>
+    <span class="help-block" *ngIf="mno.invalid && mno.touched && !mno.errors?.pattern">Mobilenumber is required</span><br>
+    <input type="submit" class="fadeIn fourth" value="Sign Up" (click)="postData()" [disabled]='(!email||!pass||!mobileNumber||!userName||password.invalid||mno.invalid||eid.invalid)'>
+    </form>
+    <!-- Remind Passowrd -->
+    <div id="formFooter">
+      Already a User?  <a class="underlineHover" routerLink="">  Login</a>
+    </div>
+  </div>

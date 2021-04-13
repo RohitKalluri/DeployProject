@@ -1,0 +1,30 @@
+<mat-toolbar>
+    <span>Online Picture Management</span>
+    <span class="example-spacer"></span>
+    <div class="navlinks">
+        <a routerLink="/home">Home</a>
+        <a routerLink="">Logout</a>
+        </div>
+</mat-toolbar>
+<div class="main">
+    <table>
+        <tr>
+            <td rowspan="2" id="userprofile"><mat-icon>account_circle</mat-icon><label>{{username}}</label></td>
+            <td>posts</td>
+            <td>followers</td>
+            <td>following</td>
+        </tr>
+        <tr>
+            <td>{{data.length}}</td>
+            <td>0</td>
+            <td>0</td>
+        </tr>
+    </table>
+
+<mat-grid-list cols="4" rowHeight="2:1">
+    <mat-grid-tile *ngFor='let item of data'>
+        <!-- <img mat-card-image [src]="item.image" alt="Photo of a Shiba Inu"> -->
+        <img mat-card-image [src]="item.image" alt="Photo of a Shiba Inu">
+    </mat-grid-tile>
+  </mat-grid-list>
+</div>

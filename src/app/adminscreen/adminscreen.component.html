@@ -1,0 +1,63 @@
+<mat-toolbar>
+    
+    <span>Online Picture Management</span>
+    <span class="example-spacer"></span>
+    <div class="navlinks">
+    <a ng-href="#" routerLink="/home">Home</a>
+    <a routerLink="/admincomment">Comments</a>
+    <a ng-href="#" routerLink="">Logout</a>
+    </div>
+</mat-toolbar>
+
+<div class="search">
+      <input matInput placeholder="Type here to search" id="search"  style="border: 1px solid blue;margin:10px;width:50%;height:40px;">
+      <button mat-raised-button color="accent" id="searchbtn" style="width:10%;height:40px;">Search</button>
+      <button mat-raised-button color="accent" id="adduserbtn" style="width:10%;height:40px;" (click)="addUserClick()">Add User</button>
+</div>
+<div class="row">
+  <div class="column left">
+    <table class="table table-stripped">
+      <thead>
+      <tr>
+        <th>Email</th>
+        <th>Name</th>
+        <th>Role</th>
+        <th>Options</th>
+      </tr>
+      </thead>
+      <tbody>
+            <tr *ngFor="let item of data">
+                <td>{{item.email}}</td>
+                <td>{{item.username}}</td>
+                <td>{{item.role}}</td>
+                <td>
+                  <button (click)="editbutton(item.email)" class="editbtn"><mat-icon>border_color</mat-icon></button>&nbsp;
+                 <button class="deletebtn" (click)="deletebutton(item.email)"><mat-icon>delete_outline</mat-icon></button></td>
+            </tr>
+      </tbody>
+    </table>
+  </div>
+    <div class="column right">
+        <br>
+        <label>Edit Details</label><br>
+            <form>
+
+              <input matInput name="username" placeholder="Enter name" [(ngModel)]="username"><br>
+              <input matInput name="email" placeholder="Enter email" [(ngModel)]="email" disabled><mat-icon>not_interested</mat-icon><br>
+              <input matInput name="mobilenumber" placeholder="Enter mobile" [(ngModel)]="mobileNumber" ><br>
+              <input matInput name="password" placeholder="Enter password" [(ngModel)]="password" disabled> <mat-icon>not_interested</mat-icon><br>
+              <button  mat-raised-button id="updatebtn" (click)="updatebutton()">Edit</button>
+              <br>
+              <br>
+            </form>
+    </div>
+</div>
+
+                    <!--<span>
+                        <button (click)="editButton(item.role)" class="btn">
+                            <i class="fa fa-edit"></i>
+                        </button>
+                        <button (click)="deleteButton(item.role)"class="btn">
+                            <i class="fa fa-trash"></i> -->
+                        <!-- </button> 
+                    </span>-->

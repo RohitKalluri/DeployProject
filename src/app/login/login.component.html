@@ -1,0 +1,30 @@
+<header>
+    <p>Online Picture Management</p>
+</header>
+<div class="wrapper fadeInDown">
+    <div id="formContent">
+      <!-- Tabs Titles -->
+  
+      <!-- Icon -->
+      <div class="fadeIn first">
+        <b><p class="heading">Login  <i class="fa fa-user"></i></p>
+          </b>
+      </div>
+  
+      <!-- Login Form -->
+      <form loginform="ngForm"> 
+        <input type="text" name="login" class="fadeIn second" #login="ngModel" placeholder="User Email" [(ngModel)]="name" required>
+        <span class="help-block" *ngIf="login.invalid && login.touched">Username is required</span>
+        <input type="password"  name="password" class="fadeIn third" #password="ngModel" placeholder="password" matTooltip='1.Password must be atleast 8 charcters &#13; 2.It must be Alphanumeric(a-z,A-Z,0-9) &#13; 3.It must contain atleast one symbol(@#/*)' matTooltipClass="multiline-tooltip" matTooltipPosition="right" [(ngModel)]="pass" pattern="[a-zA-Z0-9@#/*]{8,}||[admin]" required>
+        <div class="alert-danger" *ngIf="password.errors?.pattern">Invalid Password!!</div>
+    <span class="help-block" *ngIf="password.invalid && password.touched && !password.errors?.pattern">Password is required</span>
+        <input type="submit" class="fadeIn fourth" value="Log In" (click)="postData()" [disabled]='(!pass||!name||password.invalid)'>
+      </form>
+  
+      <!-- Remind Passowrd -->
+      <div id="formFooter">
+        New User?  <a class="underlineHover" routerLink="/signup">  Register</a>
+      </div>
+  
+    </div>
+  </div>

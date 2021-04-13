@@ -1,0 +1,37 @@
+<p>testing-component works!</p>
+<div class="container row">
+    <div class="col-md-12">
+        <h1>Upload Image</h1>
+    </div>
+  </div>
+  
+  <div class="container row">
+    <div class="col-md-6">
+        <input type="file" (change)="onFileChanged($event)">
+        <input type="text" value=" Enter image tag" id="tag" [(ngModel)]="tag">
+    </div>
+    <div class="col-md-6">
+        <input type="button" (click)="onUpload()" value="upload">
+    </div>
+  </div>
+  <hr />
+  <div class="container row">
+    <div class="col-md-12">
+        <div *ngIf=message>{{message}}</div>
+    </div>
+  </div>
+
+  <tbody>
+    <!--<div *ngFor="let item of data">-->
+      
+            <tr *ngFor="let item of data">
+                <td>{{item.imageId}}</td>
+                <td>{{item.imageTag}}</td>
+                <td>{{item.imageName}}</td>
+                <div *ngIf=item>
+                  <img [src]="item.image">
+                </div>
+                <td>
+            </tr>
+      </tbody>
+

@@ -1,0 +1,27 @@
+<mat-toolbar>
+    <span>Online Picture Management</span>
+    <span class="example-spacer"></span>
+    <div class="navlinks">
+        <a  routerLink="/admin">dashboard</a>
+        <a routerLink="">Logout</a>
+        </div>
+  </mat-toolbar>
+  <div style="width:100%;margin-top:3%">
+    <table>
+           <tr><th id="id1"> </th>
+            <th id="id2"><h2>USERNAME</h2></th>
+            <th id="id3"><h2>COMMENTS</h2></th>
+            <th id="id4"><h2>IMAGE ID</h2></th></tr>
+      <tr *ngFor="let item of commentsArray" id="loop">
+          <td id="id1">
+            <i class="fa fa-user fa-25x" aria-hidden="true"></i>
+          </td>
+          <td id="id2">
+            <h2>{{item.username}}</h2>
+          </td>
+          <td id="id3">{{item.comment}}</td>
+          <td id="id4">{{item.imageid}}</td>
+          </tr>
+    </table>
+  </div> 
+  

@@ -1,0 +1,33 @@
+<mat-toolbar>
+  <span>Online Picture Management</span>
+  <span class="example-spacer"></span>
+  <div class="navlinks">
+      <a routerLink="/profile" [style.display]="isVisible ? 'inline' : 'none'">Profile</a>
+      <a routerLink="/addImage" [style.display]="isVisible ? 'inline' : 'none'">Add Image</a>
+      <a routerLink="/home">Home</a>
+      <a routerLink="/admin" [style.display]="isVisible ? 'none' : 'inline'">Dashboard</a>
+      
+      <a routerLink="">Logout</a>
+      </div>
+</mat-toolbar>
+<input matInput id="comment"  style="border: 1px solid blue;margin:2%;width:50%;height:40px;" [(ngModel)]="comment" >
+<button mat-raised-button color="accent" id="addcommentbtn" style="width:10%;height:40px;" (click)="addCommentClicked()">Add Comment</button>
+<div style="width:100%;">
+    <tr *ngFor="let item of commentsArray" id="loop">
+      <td>
+    <table>
+        <th id="id1">
+          <i class="fa fa-user fa-25x" aria-hidden="true"></i>
+        </th>
+        <th id="id2">
+          <h2>{{item.name}}</h2>
+        </th>
+        <th id="id3">{{item.text}}</th>
+    <th id="btn"> <button id="id5" type="submit" (click)="deleteClicked(item.id,item.name)">
+      <i class="fa fa-trash" aria-hidden="true"></i>
+  </button></th>     
+ </table>
+      </td>
+ </tr>
+ <br>
+</div>
